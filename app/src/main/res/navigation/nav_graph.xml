@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/personListFragment">
+
+    <fragment
+        android:id="@+id/personListFragment"
+        android:name="com.example.planet.fr.you.test.ui.person_list_screen.PersonListFragment"
+        android:label="Person list"
+        tools:layout="@layout/fragment_person_list" >
+        <action
+            android:id="@+id/action_personListFragment_to_personFragment"
+            app:destination="@id/personFragment"
+            app:enterAnim="@anim/slide_right"
+            app:popEnterAnim="@anim/slide_left"/>
+    </fragment>
+    <fragment
+        android:id="@+id/personFragment"
+        android:name="com.example.planet.fr.you.test.ui.person_screen.PersonFragment"
+        android:label="Person"
+        tools:layout="@layout/fragment_person" />
+</navigation>
